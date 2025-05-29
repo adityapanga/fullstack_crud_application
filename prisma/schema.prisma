@@ -1,0 +1,22 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      =env("DATABASE_URL")
+}
+
+model Tracer {
+  query_number Int      @id @default(autoincrement())
+  text_query   String
+  status       Status   @default(OPEN)
+  query_at     DateTime @default(now())
+}
+
+enum Status {
+  OPEN
+  IN_PROGRESS
+  RETRIVED
+}
