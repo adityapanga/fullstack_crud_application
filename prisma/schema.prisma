@@ -20,3 +20,13 @@ enum Status {
   IN_PROGRESS
   RETRIVED
 }
+
+
+model be2CheckEligibilityLeads {
+  id        Int    @id @default(autoincrement())
+  panNumber String
+  mobilenumber String
+  name      String
+  // Add other columns as needed
+  @@map("be2CheckEligibilityLeads")
+}

@@ -1,0 +1,14 @@
+
+strs=["flow","dig","sdg"]
+strs.sort()
+first=strs[0]
+last=strs[-1]
+ans=""
+
+for i in range(0,len(first)):
+  if first[i]==last[i]:
+    ans+=first[i]
+  else:
+    break
+
+print(ans)
